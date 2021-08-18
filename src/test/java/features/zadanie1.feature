@@ -12,9 +12,8 @@ Feature: Create new address
     And click button Save
     Then will see message Address successfully added!
     And see added address with data <alias>, Anna Testerska, <address>, <city>, <code>, <country>, <phone>
-    And click Delete button
-    And will see message Address successfully deleted!
+    And close browser
 
     Examples:
-      | alias  | address   | city   | code   | country        | phone
-      | Adres1 | Testowa 1 | Kraków | 31-317 | United Kingdom | 661662663
+      | alias  | address   | city   | code   | country        | phone     |
+      | Adres1 | Testowa 1 | Kraków | 31-317 | United Kingdom | 661662663 |
