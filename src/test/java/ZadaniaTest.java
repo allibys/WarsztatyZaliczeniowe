@@ -3,6 +3,9 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/features/zadanie1.feature", plugin = {"pretty", "html:out"})
+@CucumberOptions(
+        features = "src/test/java/features/",
+        glue = {"steps"},
+        plugin = {"pretty", "html:out"})
 public class Zadanie1Test {
 }

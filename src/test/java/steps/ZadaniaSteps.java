@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
-public class Zadanie1Steps {
+public class Zadanie1Steps extends AbstractStep{
 
     private MainPage pole1;
     private LoginPage pole2;
@@ -26,25 +26,25 @@ public class Zadanie1Steps {
 
     private WebDriver driver;
 
-    @Given("an open browser with https://prod-kurs.coderslab.pl/index.php")
-    public void openMyStore() {
-        System.setProperty("webdriver.chrome.driver",
-                "src/main/resources/drivers/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://prod-kurs.coderslab.pl/index.php");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        pole5 = new NewAddress(driver);
-        pole4 = new Adresses(driver);
-        pole3 = new MyAccount(driver);
-        pole2 = new LoginPage(driver);
-        pole1 = new MainPage(driver);
-    }
-
-    @When("user clicks button Sign in")
-    public void clickSignIn() {
-        pole1.clickSignInButton();
-    }
+//    @Given("an open browser with https://prod-kurs.coderslab.pl/index.php")
+//    public void openMyStore() {
+//        System.setProperty("webdriver.chrome.driver",
+//                "src/main/resources/drivers/chromedriver.exe");
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+//        driver.get("https://prod-kurs.coderslab.pl/index.php");
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        pole5 = new NewAddress(driver);
+//        pole4 = new Adresses(driver);
+//        pole3 = new MyAccount(driver);
+//        pole2 = new LoginPage(driver);
+//        pole1 = new MainPage(driver);
+//    }
+//
+//    @When("user clicks button Sign in")
+//    public void clickSignIn() {
+//        pole1.clickSignInButton();
+//    }
 
     @And("fill field Email with value (.*)")
     public void setEmail(String email) {
@@ -91,9 +91,9 @@ public class Zadanie1Steps {
         pole4.displayData(alias, name, address, city, code, country, phone);
     }
 
-    @And("close browser")
-    public void closeBrowser(){
-        driver.quit();
-    }
+//    @And("close browser")
+//    public void closeBrowser(){
+//        driver.quit();
+//    }
 
 }
