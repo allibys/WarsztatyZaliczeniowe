@@ -7,5 +7,5 @@ import org.junit.runner.RunWith;
         features = "src/test/java/features/",
         glue = {"steps"},
         plugin = {"pretty", "html:out"})
-public class Zadanie1Test {
+public class ZadaniaTest {
 }

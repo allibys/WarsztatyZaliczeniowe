@@ -18,5 +18,19 @@ public class MainPage {
         element.click();
     }
 
+    public void clickOnTheProduct(String productName) {
+        WebElement element = driver.findElement(By.linkText(productName));
+        element.click();
+}
+
+
+
+
+
+
+
+
+
+
 
 }
